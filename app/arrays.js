@@ -19,7 +19,7 @@ arraysAnswers = {
   sum: function sum(arr) {
     let sum = 0;
 
-    arr.forEach((item) => sum += item);
+    arr.forEach(item => sum += item);
 
     return sum;
   },
@@ -32,7 +32,7 @@ arraysAnswers = {
    * @returns {Number[]} A new array containing all numbers from arr except item.
    */
   remove: function remove(arr, item) {
-    return arr.filter((item2) => item !== item2)
+    return arr.filter(item2 => item !== item2)
   },
   /*
    *It seemed like this test was missing so with some analysis of the errors
@@ -81,7 +81,7 @@ arraysAnswers = {
   prepend: function prepend(arr, item) {
     let target = [item];
 
-    arr.forEach((thing) => target.push(thing));
+    arr.forEach(thing => target.push(thing));
 
     return target;
   },
@@ -107,8 +107,8 @@ arraysAnswers = {
   concat: function concat(arr1, arr2) {
     let target = [];
 
-    arr1.forEach((thing) => target.push(thing))
-    arr2.forEach((thing) => target.push(thing))
+    arr1.forEach(thing => target.push(thing))
+    arr2.forEach(thing => target.push(thing))
 
     return target;
   },

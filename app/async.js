@@ -20,17 +20,32 @@ asyncAnswers = {
    * @param {String} url - a valid url
    * @returns {then: function} A promise like object containing a then property.
    */
+  manipulateRemoteData: function manipulateRemoteData(url) {
+    return fetch(url)
+      .then(res => res.json())
+      .then((data) => {
+        let target = [];
+
+        data.people.forEach(person => target.push(person.name));
+
+        return target.sort();
+      })
+      .catch(error => console.log(error))
+  }
+};
+
+/*  ***** This is just an example of how the second question could be answered using async / await *****
+
+
   manipulateRemoteData: async function manipulateRemoteData(url) {
     let target = [];
-
+  
     const res = await fetch(url);
-
+  
     const data = await res.json();
-
-    for(let i = 0; i < data.people.length; i++) {
-      target.push(data.people[i].name);
-    }
-
+  
+    data.people.forEach(person => target.push(person.name))
+  
     return target.sort();
-  },
-};
+  }
+*/

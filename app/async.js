@@ -7,7 +7,7 @@ asyncAnswers = {
    * @returns {then: function} A promise like object containing a then property.
    */
   async: async function async(value) {
-    return Promise.resolve(value);
+    return await value;
   },
 
   /**

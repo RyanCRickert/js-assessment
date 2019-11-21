@@ -41,9 +41,7 @@ arraysAnswers = {
 
   removeWithoutCopy: function removeWithoutCopy(arr, item) {
     while(arr.indexOf(item) != -1){
-      const remove = arr.indexOf(item);
-    
-      arr.splice(remove, 1);
+      arr.splice(arr.indexOf(item), 1);
     }
     return arr
   },
